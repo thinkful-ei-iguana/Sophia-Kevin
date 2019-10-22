@@ -27,3 +27,20 @@ function min(numbers) {
 }
 
 min([45,9,17,0,1,12])
+
+
+
+function computeAverage(numbers){
+
+  let sum = 0;
+  
+  numbers.forEach(function (number){
+    sum = sum + number;
+  });
+
+  let average = sum / numbers.length;
+
+  console.log(average);
+}
+
+computeAverage([45,9,17,0,1,12]);
