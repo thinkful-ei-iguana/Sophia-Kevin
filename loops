@@ -1,0 +1,29 @@
+function max(numbers) {
+  let i = 0;
+  const countMax = numbers.length;
+  let currentMax = numbers[0];
+  while (i < countMax) {
+    i ++;
+    if (currentMax < numbers[i]) {
+        currentMax = numbers[i];
+    }
+  }
+  console.log(currentMax);
+}
+
+max([1,4,7,9,2,0])
+
+function min(numbers) {
+  let i = 0;
+  const countMin = numbers.length;
+  let currentMin = numbers[0];
+  while (i < countMin) {
+    i ++;
+    if (currentMin > numbers[i]) {
+        currentMin = numbers[i];
+    }
+  }
+  console.log(currentMin);
+}
+
+min([45,9,17,0,1,12])
