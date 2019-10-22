@@ -1,4 +1,4 @@
-/*function repeat(fn, n) {
+/*/*function repeat(fn, n) {
     for (let i=1; i <= n; i++) {
         fn()
     }
@@ -16,7 +16,7 @@ repeat(hello, 5);
 
 repeat(goodbye, 3); */
 
-function filter(arr, fn) {
+/*function filter(arr, fn) {
   let newArr = [];
   for (let i = 0; i < arr.length; i ++) {
     if (fn(arr[i]) == true) {
@@ -56,5 +56,33 @@ const rocksWarning = hazardWarningCreator('Rocks on the Road');
 const overTurnTruck = hazardWarningCreator('Overturned Truck on the Road!');
 const downedPowerLines = hazardWarningCreator('Power lines are down!');
 
-overTurnTruck(`Beryl and Diamond`);
+overTurnTruck(`Beryl and Diamond`); */
+
+const movement = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+/*function filteredMovement () {
+  let filtered = movement.filter(function(x) {return x[0] >=0 && x[1] >=0;});
+  console.log(filtered);
+  filtered.forEach(function(y){
+    console.log(y);
+  })
+  return filtered;
+}
+filteredMovement(movement);
+
+function mappedMovement () {
+  let mapped = movement.map(function(x) {return x[0] + x[1];});
+  console.log(mapped);
+}
+mappedMovement(movement); */
+
+function howManySteps(){
+  let increment = 0;
+  movement.forEach(function(x) {
+    increment ++;
+    let totalMovement = (x[0] + x[1]); 
+    console.log('Movement #' + increment + ': ' + totalMovement + 'steps.');
+    return totalMovement;
+  });
+}
+howManySteps(movement);
 
