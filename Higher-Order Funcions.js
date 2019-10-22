@@ -58,7 +58,7 @@ const downedPowerLines = hazardWarningCreator('Power lines are down!');
 
 overTurnTruck(`Beryl and Diamond`); */
 
-const movement = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+//const movement = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
 /*function filteredMovement () {
   let filtered = movement.filter(function(x) {return x[0] >=0 && x[1] >=0;});
   console.log(filtered);
@@ -75,7 +75,7 @@ function mappedMovement () {
 }
 mappedMovement(movement); */
 
-function howManySteps(){
+/*function howManySteps(){
   let increment = 0;
   movement.forEach(function(x) {
     increment ++;
@@ -84,5 +84,24 @@ function howManySteps(){
     return totalMovement;
   });
 }
-howManySteps(movement);
+howManySteps(movement);*/
 
+let sentence = ['noggin', 'oreo', 'the', 'moon', 'time', 'tele', 'steed', 'his', 'tent', 'apollo', 'her', 'lives', 'though',
+'shoo', 'tofu', 'budapest'];
+
+
+sentence.reduce((accumulator, word) => {
+      let code = [];
+      if (word.length === 3) {
+          code.push(' ');
+      }
+      else {
+        code.push(word[word.length - 1])
+      }
+      
+      return code;
+  }
+);
+console.log(code.toUpperCase);
+
+ 
