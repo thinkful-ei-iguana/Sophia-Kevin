@@ -89,19 +89,20 @@ howManySteps(movement);*/
 let sentence = ['noggin', 'oreo', 'the', 'moon', 'time', 'tele', 'steed', 'his', 'tent', 'apollo', 'her', 'lives', 'though',
 'shoo', 'tofu', 'budapest'];
 
-
-sentence.reduce((accumulator, word) => {
-      let code = [];
-      if (word.length === 3) {
-          code.push(' ');
-      }
-      else {
-        code.push(word[word.length - 1])
-      }
-      
-      return code;
-  }
-);
-console.log(code.toUpperCase);
+let reducer = (accumulator, word) => {
+    if (word.length === 3) {
+        accumulator.push(' ');
+    }
+    else {
+        let lastLetter = word[word.length - 1];
+        accumulator.push(lastLetter);
+    }
+    
+    return accumulator;
+};
+let result = sentence.reduce(reducer, []);
+let joinedString = result.join('');
+let capitCode = joinedString.toUpperCase();
+console.log(capitCode);
 
  
